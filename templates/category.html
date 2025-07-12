@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Jogos de {{ categoria }}</title>
+</head>
+<body>
+
+    <h1>Categoria: {{ categoria }}</h1>
+
+    <ul>
+        {% for jogo in jogos %}
+            <li>{{ jogo }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if not jogos %}
+        <p>Nenhum jogo encontrado para esta categoria.</p>
+    {% endif %}
+
+</body>
+</html>

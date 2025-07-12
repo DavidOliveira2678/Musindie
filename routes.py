@@ -1,14 +1,25 @@
-from main import app
+from main import app    
+from flask import Flask , render_template
 
-#rotas
+
+
 @app.route("/")
 def homepage():
-    return "Meu site no Flask!"
+    return "Página incial do site!"
 
+@app.route("/category/<nome>")
+def categoria(nome):
+   
+   games_categories = {
+    "RPG":["seaoftears","undertale","masseffect"],
+    "Indie":["celeste","stardewvalley","indivisibleswitch","geshinimpact"],
+    "Acao&Aventura":["blasphemous","astroneer","eternalstrands"]
+   } 
+
+   lista_jogos = games_categories.get(nome , [])
+ 
+   return render_template("category.html", categoria=nome , jogos=lista_jogos)
+   
 @app.route("/blog")
 def blog():
-    return "Você está no blog."
-
-@app.route("/celeste")
-def celeste():
-    return "Celeste é um jogo indie!!"
+    return render_template("blog.html")
