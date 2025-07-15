@@ -13,13 +13,13 @@ games_categories = {
     "acao-aventura":["blasphemous","astroneer","eternal_strands"],
     "Corrida":["forza_horizon","crash_team_racing","f1","the_crew_motorfest"],
     "Luta":["mortal_kombat","dragon_ball","guilty_gear","undisputed","brawlhalla"]
-   } 
+}
 @app.route("/category/<nome>")
 
 def categoria(nome):
-   lista_jogos = games_categories.get(nome , [])
-   return render_template("category.html", categoria=nome , jogos=lista_jogos)
-  
+    lista_jogos = games_categories.get(nome , [])
+    return render_template("category.html", categoria=nome , jogos=lista_jogos)
+
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
