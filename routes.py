@@ -28,7 +28,6 @@ def all_categories():
   category_list = list(games_categories.keys())
   return render_template('all_categories.html', categories=category_list)
 
-
 ## Rota Blog
 @app.route("/blog")
 def blog():
