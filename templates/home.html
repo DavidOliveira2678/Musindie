@@ -1,21 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Musindie - Seu site de Jogos</title>
-       <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
-    <head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musindie - Sua biblioteca musical de jogos independentes</title>
+    <meta name = "description" content="Um site para aqueles que amam ou querem conhecer trilhas sonoras do universo de jogos independentes.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+<head>
 
-    <body>
-        <header>
-        <div class="logo">Musindie</div>
-            <h1>Site de jogos!</h1>
-            <p>Para aqueles que ama games!</p>
-        </header>
+<body>
+    <header class="cabecalho">
+        <img class="imagem-cabecalho" src="../images/foto-p.png" alt="logo do Musindie">
+        <nav class="cabeçalho-menu">
+            <a class="cabecalho-menu-opcao" href="categorias" target="_self">Categorias de jogos</a>
+            <a class="cabecalho-menu-opcao" href="https://github.com/DavidOliveira2678/Musindie.git" target="_blank" rel="external">Repositório do GitHub</a>
+        </nav>
+    </header>
 
-        <p>Total de categorias:{{total_categories}}</p>
+    <main class="conteudo">
+        <section class="conteudo-primario">
+            <div class="secao-conteudo-primario">
+                <h1 class="secao-conteudo-primario-titulo">Musindie</h1>
+                <h2 class="secao-conteudo-primario-subtitulo">Sua biblioteca musical de jogos independentes</h2>    
+                <p class="conteudo-primario-paragrafo">O site possui, atualmente, um total de <strong>{{total_categories}}</strong> categorias de jogos e <strong>{{total_games}}</strong> jogos registrados para você conhecer ou revisitar trilhas sonoras do universo de jogos indie!</p>
+                <button class="conteudo-primario-botao">
+                    <strong><a href="" class="conteudo-primario-botao-texto">Visitar as categorias de jogos!</a></strong>
+                </button>
+            </div>
+        </section>
+    </main>
 
-        <p>Total de jogos:{{total_games}}</p>
+    <footer class="rodape">
+        <h1 class="rodape-titulo"><strong>Musindie</strong> - Sua biblioteca musical de jogos independentes</h1>
+        <p class="rodape-texto">Observação: <strong>"Musindie"</strong> é um site desenvolvido por <ins>David</ins> e <ins>Klarisse</ins>, alunos do IFPE - Campus Paulista, como projeto para a matéria de <em>Introdução à Programação</em>, lecionada pelo professor Rodrigo Lira.</p>
+    </footer>
 
-    </body>
+</body>
 </html>
-
