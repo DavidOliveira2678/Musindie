@@ -10,12 +10,12 @@
     <h1>Categoria: {{ categoria }}</h1>
 
     <ul>
-        {% for jogo in jogos %}
-            <li>{{ jogo }}</li>
+        {% for game in games %}
+            <li>{{ game }}</li>
         {% endfor %}
     </ul>
 
-    {% if not jogos %}
+    {% if not games %}
         <p>Nenhum jogo encontrado para esta categoria.</p>
     {% endif %}
 
