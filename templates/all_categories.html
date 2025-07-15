@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>All Categories</title>
+    </head>
+<body>
+    <h1>All Game Categories</h1>
+
+    <ul>
+        {% for category in categories %}
+            <li>
+                <a href="{{ url_for('game_category', nome=category) }}">
+                    {{ category.replace('-', ' ').title() }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+
+</body>
+</html>

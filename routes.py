@@ -19,13 +19,14 @@ games_categories = {
 
 ## Rota Categoria de jogo
 @app.route("/category/<nome>")
-
 def game_category(nome):
    games_list = games_categories.get(nome , [])
    return render_template("category.html", categoria=nome , games=games_list)
 
+@app.route("/category/all")
 def all_categories():
-    return "" // TODO  #retornar todas as categorias
+  category_list = list(games_categories.keys())
+  return render_template('all_categories.html', categories=category_list)
 
 
 ## Rota Blog
