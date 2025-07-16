@@ -23,6 +23,7 @@ def game_category(nome):
    games_list = games_categories.get(nome , [])
    return render_template("category.html", categoria=nome , games=games_list)
 
+## Rota com todas as categorias
 @app.route("/category/all")
 def all_categories():
   category_list = list(games_categories.keys())
