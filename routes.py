@@ -11,24 +11,30 @@ def homepage():
 ## Jogos e categorias
 games_categories = {
     "RPG":["sea of tears","undertale","mass effect"],
-    "Indie":["celeste","stardew valley","indivisible switch","sword of the sea"],
+    "Indie":["stardew valley","indivisible switch","sword of the sea"],
     "acao-aventura":["blasphemous","astroneer","eternal strands"],
     "corrida":["forza horizon","crash team racing","f1","the crew motorfest"],
-    "Luta":["mortal kombat","dragon ball","guilty gear","undisputed","brawlhalla"]
-   }
+    "Luta":["mortal kombat","dragon ball","guilty gear","undisputed","brawlhalla"],
+    "Plataforma":["celeste"]
+  }
 
 ## Rota Categoria de jogo
 @app.route("/category/<nome>")
 def game_category(nome):
-   games_list = games_categories.get(nome , [])
-   return render_template("category.html", categoria=nome , games=games_list)
+  games_list = games_categories.get(nome , [])
+  return render_template("category.html", categoria=nome , games=games_list)
 
-@app.route("/category/all")
+@app.route("/categorias")
 def all_categories():
-  category_list = list(games_categories.keys())
-  return render_template('all_categories.html', categories=category_list)
+    category_list = list(games_categories.keys())
+    return render_template('all_categories.html', categories=category_list, games_categories=games_categories)
 
 ## Rota Blog
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
+
+##Rota Cadastro
+@app.route("/cadastro")
+def cadastro():
+    return render_template("login.html")

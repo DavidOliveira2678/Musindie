@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.google.com/share?selection.family=Cal+Sans');
+
+/* Configs gerais da página */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +18,13 @@ body {
     font-weight: 550;
 }
 
+ul {
+    text-transform: capitalize;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* Cabeçalho / Header */
 .cabecalho {
     display: flex;
     flex-direction: row;
@@ -49,78 +58,13 @@ body {
     transition: 200ms;
 }
 
-.conteudo {
-    text-align: center;
-    padding-top: 10px;
-    margin-bottom: 32px;
-}
+/* ----------------------------------------------------------------------------- */
 
-.conteudo-primario {
-    background-color: rgb(245, 239, 245);
-    border: none;
-    border-radius: 25px;
-    width: 1105px;
-    height: 485px;
-    display: block;
-    margin: 0 auto;
-}
+/* conteúdo da página */
 
-.secao-conteudo-primario {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+/* ----------------------------------------------------------------------------- */
 
-.secao-conteudo-primario-titulo {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 80px;
-}
-
-.secao-conteudo-primario-subtitulo {
-    font-size: 25px;
-    justify-content: center;
-}
-
-.conteudo-primario-paragrafo {
-    justify-content: center;
-    font-size: 34px;
-    padding-top: 54px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 995px;
-    padding-bottom: 20px;
-}
-
-.conteudo-primario-botao {
-    background-color: rgb(255, 255, 255);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 38px;
-    color: #823396;
-    display: block;
-    border-radius: 10px;
-    margin: 15px;
-    border: none;
-    width: 580px;
-    height: 70px;
-    margin: 0 auto;
-    padding: 10px;
-    box-shadow: 6px 6px 8px #211e22;
-    transition:200ms;
-}
-
-.conteudo-primario-botao:hover {
-    background-color: rgb(255, 173, 235);
-    color: rgb(255, 255, 255);
-    font-size: 42px;
-    height: 76px;
-    width: 616px;
-    transition: 200ms;
-}
-
+/* Rodapé / Footer */
 .rodape {
     border-top: 0.4px solid #a584a3;
     color: rgb(245, 239, 245);
