@@ -10,19 +10,19 @@ def homepage():
 
 ## Jogos e categorias
 games_categories = {
-    "RPG":["sea of tears","undertale","mass effect"],
+    "RPG":["sea of stars","undertale","mass effect"],
     "Indie":["stardew valley","indivisible switch","sword of the sea"],
     "acao-aventura":["blasphemous","astroneer","eternal strands"],
-    "corrida":["forza horizon","crash team racing","f1","the crew motorfest"],
-    "Luta":["mortal kombat","dragon ball","guilty gear","undisputed","brawlhalla"],
+    "corrida":["crash team racing","f1","the crew motorfest"],
+    "Luta":["guilty gear","brawlhalla"],
     "Plataforma":["celeste"]
   }
 
 ## Rota Categoria de jogo
-@app.route("/category/<nome>")
+@app.route("/jogos/<nome>")
 def game_category(nome):
-  games_list = games_categories.get(nome , [])
-  return render_template("category.html", categoria=nome , games=games_list)
+    nome_formatado = nome.replace("-", " ")
+    return render_template("jogos.html", nome=nome_formatado)
 
 @app.route("/categorias")
 def all_categories():

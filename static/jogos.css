@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.google.com/share?selection.family=Cal+Sans');
 
-/* Configs gerais da página */
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +10,10 @@
 }
 
 body {
-    background-color: #8f42b3;
     color: #483d8b;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     font-weight: 550;
-}
-
-ul {
-    text-transform: capitalize;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -32,6 +26,14 @@ ul {
     justify-content: space-around;
     padding: 12px;
     border-bottom: 0.4px solid #a584a3;
+    background-color: #483d8b;
+    opacity: 75%;
+    transition: 200ms;
+}
+
+.cabecalho:hover {
+    opacity: 100%;
+    transition: 200ms;
 }
 
 .cabecalho-imagem {
@@ -60,7 +62,6 @@ ul {
 
 /* ----------------------------------------------------------------------------- */
 
-/* conteúdo da página */
 .pagina {
     display: flex;
     flex-direction: column;
@@ -68,7 +69,12 @@ ul {
 }
 
 .conteudo {
+    width: 610px;
     flex: 1;
+}
+
+.conteudo-secao-principal {
+    background-color: white;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -81,8 +87,16 @@ ul {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: #483d8b;
     bottom: 0;
     width: 100%;
+    opacity: 75%;
+    transition: 200ms;
+}
+
+.rodape:hover {
+    opacity: 100%;
+    transition: 200ms;
 }
 
 .rodape-titulo {

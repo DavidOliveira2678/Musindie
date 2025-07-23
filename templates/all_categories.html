@@ -8,14 +8,15 @@
     </head>
 <body>
     <header class="cabecalho">
-        <img class="imagem-cabecalho" src="{{ url_for('static', filename='images/foto-p.png') }}" alt="logo do Musindie">
+        <img class="cabecalho-imagem" src="{{ url_for('static', filename='images/foto-p.png') }}" alt="logo do Musindie">
         <nav class="cabeçalho-menu">
             <a class="cabecalho-menu-opcao" href="https://github.com/DavidOliveira2678/Musindie.git" target="_blank" rel="external">Repositório do GitHub</a>
-            <a class="cabecalho-menu-opcao" href="Página inicial" target="_self">Categorias de jogos</a>
-            <a class="cabecalho-menu-opcao" href="cadastro" target="_self" rel="external">Cadastro</a>
+            <a class="cabecalho-menu-opcao" href="/" target="_self">Página inicial</a>
+            <a class="cabecalho-menu-opcao" href="/cadastro" target="_self" rel="external">Cadastro</a>
         </nav>
     </header>
 
+<div class="pagina">
     <main class="conteudo">
         <h1>Categorias de Jogos</h1>
         <p>Gêneros de jogos registrados no site</p>
@@ -26,7 +27,7 @@
                     <p>{{ category.replace('-', ' ').title() }}</p>
                     <ul>
                         {% for game in games_categories[category] %}
-                            <li>{{ game }}</li>
+                            <li><a href="/jogos/{{ game }}">{{ game }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
@@ -40,5 +41,7 @@
         <h1 class="rodape-titulo"><strong>Musindie</strong> - Sua biblioteca musical de jogos independentes</h1>
         <p class="rodape-texto">Observação: <strong>"Musindie"</strong> é um site desenvolvido por <a href="https://github.com/DavidOliveira2678/" target="_blank" rel="external" class="rodape-opcao">David Willyam</a> e <a href="https://github.com/klarisse90" target="_blank" rel="external" class="rodape-opcao">Klarisse Maria</a>, alunos do IFPE - Campus Paulista, como projeto para a matéria de <em>Introdução à Programação</em>, lecionada pelo professor <a href="https://github.com/rodrigoclira" target="_blank" rel="external" class="rodape-opcao">Rodrigo Lira</a>.</p>
     </footer>
+</div>
+
 </body>
 </html>
