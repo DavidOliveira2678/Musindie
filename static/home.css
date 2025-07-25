@@ -28,12 +28,6 @@ body {
     border-bottom: 0.4px solid #a584a3;
 }
 
-.cabecalho-imagem {
-    width: 54px;
-    height: 54px;
-    border-radius: 25px;
-}
-
 .cabeçalho-menu {
     display: flex;
     gap: 24px;
@@ -109,24 +103,27 @@ body {
 }
 
 .conteudo-primario-botao {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(246, 215, 253);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 38px;
     color: #823396;
     display: block;
     border-radius: 10px;
-    margin: 15px;
     border: none;
     width: 580px;
     height: 70px;
     margin: 0 auto;
-    padding: 10px;
     box-shadow: 6px 6px 8px #211e22;
     transition:200ms;
+
+    /* centralizar verticalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .conteudo-primario-botao:hover {
-    background-color: rgb(255, 173, 235);
+    background-color: rgb(243, 153, 255);
     color: rgb(255, 255, 255);
     font-size: 42px;
     height: 76px;

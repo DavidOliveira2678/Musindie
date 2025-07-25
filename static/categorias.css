@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -32,12 +33,6 @@ ul {
     justify-content: space-around;
     padding: 12px;
     border-bottom: 0.4px solid #a584a3;
-}
-
-.cabecalho-imagem {
-    width: 54px;
-    height: 54px;
-    border-radius: 25px;
 }
 
 .cabeçalho-menu {
@@ -68,7 +63,136 @@ ul {
 }
 
 .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     flex: 1;
+    padding-top: 12px;
+    margin-bottom: 15px;
+}
+
+.conteudo-principal{
+    padding-top: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    width: 764px;
+    height: 760px;
+    margin: 0 auto;
+}
+
+.conteudo-principal-titulo{
+    font-size: 48px;
+}
+
+.conteudo-principal-paragrafo{
+    font-size: 22px;
+    color: #7f60a8;
+}
+
+.conteudo-principal-lista-jogos{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.conteudo-principal-lista-jogos-categoria-titulo{
+    font-size: 36px;
+    border-bottom: 1px solid #483d8b;
+    background-color: #bd53ce;
+    border-radius: 20px;
+    transition: 200ms;
+    padding-left: 12px;
+    color: #5d3a85;
+}
+
+.conteudo-principal-lista-jogos-categoria-div {
+    background-color: #c989da;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 664px;
+    transition: 200ms;
+    text-align: center;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.conteudo-principal-lista-jogos-categoria-div:hover .conteudo-principal-lista-jogos-categoria-titulo{
+    background-color: #e483ec;
+    font-size: 42px;
+    transition: 200ms;
+}
+
+.conteudo-principal-lista-jogos-jogo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 2px;
+}
+
+.conteudo-principal-lista-jogos-jogo-opcao{
+    font-size: 22px;
+    color: #ffffff;
+    padding-left: 16px;
+    transition: 200ms;
+}
+
+.conteudo-principal-lista-jogos-jogo-opcao:hover{
+    font-size: 26px;
+    color: #8b25ff;
+    transition: 200ms;
+}
+
+.conteudo-secao-secundaria{
+    padding-top: 26px;
+}
+
+.conteudo-secao-secundaria-div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: 200ms;
+}
+
+.conteudo-secao-secundaria-div:hover .conteudo-secao-secundaria-div-paragrafo{
+    opacity: 100%;
+    transition: 200ms;
+}
+
+
+.conteudo-secao-secundaria-div-paragrafo{
+    color: aliceblue;
+    opacity: 0;
+    transition: 200ms;
+}
+
+.conteudo-secao-secundaria-div-botao {
+    background-color: aliceblue;
+    font-size: 45px;
+    box-shadow: 6px 6px 8px #211e22;
+    width: 480px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 20px;
+    
+    /* centralizar verticalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+}
+
+.conteudo-secao-secundaria-div-botao:hover {
+    background-color: rgb(219, 102, 255);
+    color: #ffffff;
+    font-size: 58px;
+    box-shadow: 6px 6px 8px #211e22;
+    width: 512px;
+    margin: 0 auto;
+    border-radius: 20px;
+    transition: 200ms;
 }
 
 /* ----------------------------------------------------------------------------- */

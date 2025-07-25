@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musindie - {{ nome }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='jogos.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
     <style>
         body {
             background-image: url("{{ url_for('static', filename='images/' + nome + '.png') }}");
@@ -18,7 +19,7 @@
 
 <body>
     <header class="cabecalho">
-        <img class="cabecalho-imagem" src="{{ url_for('static', filename='images/foto-p.png') }}" alt="logo do Musindie">
+        <img class="cabecalho-imagem" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo do Musindie">
         <nav class="cabeçalho-menu">
             <a class="cabecalho-menu-opcao" href="/categorias" target="_self">Categorias de jogos</a>
             <a class="cabecalho-menu-opcao" href="https://github.com/DavidOliveira2678/Musindie.git" target="_blank" rel="external">Repositório do GitHub</a>
@@ -32,8 +33,9 @@
             {% if nome == "celeste" %}
             <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo"> Test: {{nome}}</h1>
             <p class="conteudo-secao-principal-paragrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos illo non praesentium aliquid ratione perferendis odit dolorum laboriosam aspernatur quis doloremque veritatis beatae, repellat eos voluptatibus ad adipisci vitae.</p>
+            <br>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=pkcMRPtDfPSmI5TZ&amp;list=OLAK5uy_nTPHGMjp_ZT74ssuHdCTVhZlaeooHUjeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
-            <a href="######">Escutar no Spotify</a>
+            <a href="https://open.spotify.com/intl-pt/album/1ZfETfec0U02KrKNI8w3Gf?si=5ZkP9uasQPan10Lkr0u6fw" target="_blank" rel="external" class="conteudo-secao-principal-spotify">Escutar no Spotify</a>
 
             {% elif nome == "blasphemous" %}
             <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo"> Test: {{nome}}</h1>

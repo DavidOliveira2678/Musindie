@@ -30,12 +30,6 @@ body {
     border-bottom: 0.4px solid #a584a3;
 }
 
-.cabecalho-imagem {
-    width: 54px;
-    height: 54px;
-    border-radius: 25px;
-}
-
 .cabeçalho-menu {
     display: flex;
     gap: 24px;

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musindie - Categorias</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='categorias.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
     </head>
 <body>
     <header class="cabecalho">
-        <img class="cabecalho-imagem" src="{{ url_for('static', filename='images/foto-p.png') }}" alt="logo do Musindie">
+        <img class="cabecalho-imagem" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo do Musindie">
         <nav class="cabeçalho-menu">
             <a class="cabecalho-menu-opcao" href="https://github.com/DavidOliveira2678/Musindie.git" target="_blank" rel="external">Repositório do GitHub</a>
             <a class="cabecalho-menu-opcao" href="/" target="_self">Página inicial</a>
@@ -18,23 +19,31 @@
 
 <div class="pagina">
     <main class="conteudo">
-        <h1>Categorias de Jogos</h1>
-        <p>Gêneros de jogos registrados no site</p>
+        <section class="conteudo-principal">
+            <h1 class="conteudo-principal-titulo">Categorias de Jogos</h1>
+            <p class="conteudo-principal-paragrafo">Gêneros de jogos registrados no site</p>
+            <ul class="conteudo-principal-lista-jogos">
+                {% for category in categories %}
+                    <li class="conteudo-principal-lista-jogos-categoria-lista"></li>
+                        <div class="conteudo-principal-lista-jogos-categoria-div">
+                            <p class="conteudo-principal-lista-jogos-categoria-titulo">{{ category.replace('-', ' ').title() }}</p>
+                            <ul class="conteudo-principal-lista-jogos-jogo">
+                                {% for game in games_categories[category] %}
+                                    <li><a href="/categorias/{{ game }}" class="conteudo-principal-lista-jogos-jogo-opcao">{{ game }}</a></li>
+                                {% endfor %}
+                            </ul>
+                    </li>
+                    </div>
+                {% endfor %}
+            </ul>
+        </section>
 
-        <ul class="lista-Jogos">
-            {% for category in categories %}
-                <li>
-                    <p>{{ category.replace('-', ' ').title() }}</p>
-                    <ul>
-                        {% for game in games_categories[category] %}
-                            <li><a href="/jogos/{{ game }}">{{ game }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-            {% endfor %}
-        </ul>
-
-        <a href="/">Voltar</a>
+        <section class="conteudo-secao-secundaria">
+            <div class="conteudo-secao-secundaria-div">
+                <a href="/" class="conteudo-secao-secundaria-div-botao">Voltar</a>
+                <p class="conteudo-secao-secundaria-div-paragrafo">Retornar à página principal</p>
+            </div>
+        </section>
     </main>
 
     <footer class="rodape">
