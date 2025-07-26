@@ -27,7 +27,7 @@ body {
     padding: 12px;
     border-bottom: 0.4px solid #a584a3;
     background-color: #483d8b;
-    opacity: 75%;
+    opacity: 65%;
     transition: 200ms;
 }
 
@@ -65,10 +65,111 @@ body {
 .conteudo {
     width: 610px;
     flex: 1;
+    padding-top: 10px;
 }
 
 .conteudo-secao-principal {
+    display: flex;
+    flex-direction: column;
     background-color: white;
+    box-shadow: 8px 8px 8px #191414;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 660px;
+    height: auto;
+    padding: 5px;
+}
+
+.conteudo-secao-principal-titulo{
+    font-size: 42px;
+}
+
+.conteudo-secao-principal-paragrafo{
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.conteudo-secao-principal-descEmbed{
+    color: rgb(139, 116, 143);
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+.conteudo-secao-principal-div-spotify{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.conteudo-secao-principal-spotify{
+    font-size: 24px;
+    color: #191414;
+    display: flex;
+    flex-direction: row;
+    background-color:#1DB954;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 66px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #191414;
+    transition: 200ms;
+}
+
+.conteudo-secao-principal-spotify:hover{
+    font-size: 34px;
+    background-color:#191414;
+    color: #1DB954;
+    width: 586px;
+    height: 76px;
+    transition: 200ms;
+}
+
+.conteudo-secao-principal-spotify-imagem{
+    width: 54px;
+    height: 54px;
+    transition: 200ms
+}
+
+.conteudo-secao-principal-spotify:hover .conteudo-secao-principal-spotify-imagem{
+    width: 64px;
+    height: 64px;
+    transition: 200ms;
+}
+
+.conteudo-secao-secundaria{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.conteudo-secao-secundaria-botao{
+    font-size: 32px;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 48px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 4px 4px 4px #191414;
+    transition: 200ms;
+}
+
+.conteudo-secao-secundaria-botao:hover{
+    font-size: 36px;
+    width: 660px;
+    height: 54px;
+    background-color:rgb(207, 51, 255);
+    transition: 200ms;
+    color: white;
+}
+
+.conteudo-secao-secundaria-paragrafo{
+    color: white;
+    text-align: center;
+    transition: 200ms;
 }
 
 /* ----------------------------------------------------------------------------- */

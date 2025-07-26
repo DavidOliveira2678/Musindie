@@ -30,22 +30,162 @@
 <div class="pagina">
     <main class="conteudo">
         <section class="conteudo-secao-principal">
-            {% if nome == "celeste" %}
-            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo"> Test: {{nome}}</h1>
-            <p class="conteudo-secao-principal-paragrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta dignissimos illo non praesentium aliquid ratione perferendis odit dolorum laboriosam aspernatur quis doloremque veritatis beatae, repellat eos voluptatibus ad adipisci vitae.</p>
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=pkcMRPtDfPSmI5TZ&amp;list=OLAK5uy_nTPHGMjp_ZT74ssuHdCTVhZlaeooHUjeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
-            <a href="https://open.spotify.com/intl-pt/album/1ZfETfec0U02KrKNI8w3Gf?si=5ZkP9uasQPan10Lkr0u6fw" target="_blank" rel="external" class="conteudo-secao-principal-spotify">Escutar no Spotify</a>
+            <!-- Categoria de RPG -->
+            {% if nome == "sea of stars" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Sea of Stars é um RPG de turnos inspirado nos clássicos dos anos 90, mas com alma e frescor próprios. Ele segue Valere e Zale, dois Jovens Guerreiros do Solstício, em uma jornada para combater as criações de um alquimista sombrio. Com um mundo vibrante, combate fluido e narrativa envolvente, o jogo equilibra nostalgia e inovação com maestria. Mas é a trilha sonora - composta por Eric W. Brown e com faixas adicionais de Yasunori Mitsuda (compositor de Chrono Trigger e Xenoblade) - que eleva tudo a um novo nível: ora épica, ora melancólica, ela conduz cada cena como uma constelação guiando o navio da aventura.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=JEQC9TM7sDm5_1tB&amp;list=PLu-N6Eh9RqCTeWdkXUCfw3T3wyGrw3DLs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe class="conteudo-secao-principal-embedlink">
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/0sKlNbj6o886BljTU9kFTT?si=uq34FNf2Rn6xbHFvyHcJXg" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "undertale" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Undertale é um RPG em que você pode lutar ou poupar, e cada escolha pesa. Em um mundo subterrâneo cheio de criaturas excêntricas e diálogos memoráveis, o jogo explora temas de empatia, violência e redenção. Criado quase inteiramente por Toby Fox, a trilha sonora é um espetáculo: simples, cativante e incrivelmente expressiva, ela se adapta aos momentos com genialidade, tornando-se parte inseparável da experiência e responsável por algumas das emoções mais fortes que o jogo provoca.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=Kh7Qws9xLApOLMuO&amp;list=PLKXdyINOQYsb38jn5HGiF6w8X3rph4IIx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/2M2Ae2SvZe3fmzUtlVOV5Z?si=2_ReL0T5RSS4cvjYHXS5Ww" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "stardew valley" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Stardew Valley é um simulador de vida rural em que você troca a correria da cidade pela simplicidade de cuidar de uma fazenda. Entre plantações, amizades, pescarias e minas misteriosas, o jogo constrói um ritmo acolhedor e terapêutico. A trilha sonora, composta por ConcernedApe (Eric Barone), é suave e nostálgica, com temas que mudam conforme as estações, acompanhando o tempo como um velho amigo que canta junto com a terra.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=FZWznSvCjLzU0Ae7&amp;list=PLKDOdCjxOjzIFucHobwJpSK4-vAVXST90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/0swXkrnGm7RP1BIHiqV8Jk?si=_SOK7CYLR_ymuM-Tfq9K2Q" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "indivisible" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Indivisible é um RPG de ação desenhado à mão que segue Ajna, uma jovem com poderes misteriosos, em uma jornada de autoconhecimento e reconciliação. Com combate em tempo real inspirado em clássicos e um elenco rico de personagens jogáveis, o jogo brilha em estilo e alma. A trilha sonora, composta por Hiroki Kikuta (compositor de Secret of Mana), mistura o épico com o exótico, criando paisagens sonoras que elevam o mito e dão ritmo à busca interior da protagonista.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=YNifcc4FChlatWEx&amp;list=PL5ND6-uUeIwssutnKWoTCRDxd87sE4YJj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/3y4M5wlHJghH31RzckofIA?si=h2X-rKnjSBuqVELwSMXSww" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            <!-- Categoria de Ação e Aventura -->
+
+            {% elif nome == "astroneer" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Astroneer é uma experiência de exploração espacial serena, onde você coloniza planetas alienígenas esculpindo o terreno e construindo com criatividade. Sem combates, o jogo convida à contemplação, à descoberta e à engenhosidade pura. A trilha sonora, assinada por Rutger Zuydervelt (Machinefabriek), é atmosférica e minimalista, sintetizando a vastidão silenciosa do cosmos e o sentimento de solidão cósmica com delicadeza sonora quase meditativa.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=u0fzSA_ALah3MILA&amp;list=OLAK5uy_klikpo3pxV4UI63FmwqDnoAv4RbU_19G0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/7sVoyVagY06oALj31hBgvf?si=bZ58qMxNRYurkH59qaKU0A" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "eternal strands" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Eternal Strands é um RPG de ação onde você assume o papel de Brynn, uma tecelã mágica capaz de manipular os elementos e desafiar criaturas colossais em combates verticais de tirar o fôlego. Com física dinâmica, cenários grandiosos e poderes que moldam o mundo, o jogo se destaca pela escala e liberdade. A trilha sonora, composta por Austin Wintory, é envolvente e poderosa, misturando texturas orquestrais com sons inusitados, ampliando cada passo, cada queda e cada ascensão com uma força quase mitológica.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=MfkBTS2prq_x5udZ&amp;list=OLAK5uy_mLetqzjjYOENUZ7aBa3y4c414QLJTl_IM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/6nij8OsV3RavWJSNeuaIq3?si=h3G3zCZjQVOhiuhr1p_i8w" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            <!-- Categoria de Metroidvania -->
 
             {% elif nome == "blasphemous" %}
-            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo"> Test: {{nome}}</h1>
-            <p class="conteudo-secao-principal-paragrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, libero error facilis et consequatur odio nobis at recusandae. Cum reiciendis omnis suscipit facere, dolor rerum laudantium excepturi odit ad sed.</p>
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Blasphemous é um jogo de ação e plataforma sombrio, ambientado em uma terra devastada por fé distorcida e sofrimento ritual. A combinação da direção de artística e a trilha sonora de Carlos Viola eleva a experiência: com tons litúrgicos, flamencos e melancólicos, a música não apenas acompanha, mas intensifica o peso espiritual e emocional de cada momento.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=XI04IdkHXlo4hVA7&amp;list=OLAK5uy_niQS3a2p6sPE5XXj3oCSxsp9gYXieSznY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/1oGyVpRrssPhtz23UDTYYS?si=rd5gBOo1R-mIx8zjQyuClQ" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "hollow knight" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Hollow Knight é uma aventura metroidvania profunda e melancólica, ambientada no reino decadente de Hallownest. Você assume o papel de um pequeno cavaleiro silencioso, explorando cavernas esquecidas, enfrentando inimigos desafiadores e desenterrando segredos de um mundo à beira do esquecimento. A direção de arte minimalista e a atmosfera sombria encantam, mas é a trilha sonora de Christopher Larkin, com seus tons orquestrais etéreos e melancólicos, que conduz emocionalmente cada batida dessa jornada subterrânea.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=YKzbXDBsj4Ws6W_A&amp;list=PLmOldskd2VbL7_t-NE9p6rEboq_v0AHko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/4XgGOMRY7H4hl6OQi5wb2Z?si=7B0qD0fGSwCTZ-ADrOdDmw" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "super mombo quest" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Super Mombo Quest é um plataforma metroidvania acelerado, onde você controla o carismático Mombo em combos acrobáticos por mundos vibrantes e interconectados. O ritmo é viciante, com desafios precisos e estilo de sobra. A trilha sonora, composta por Midpixel, é pura eletricidade sonora, misturando sons retrô e percussões exóticas que fazem cada pulo e pancada parecer parte de um show.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/I7xZow0DyqA?si=-7hNyVX9_wqJTk2a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/1ouJgodLOLXuPLFuIO6tAo?si=5R8c4JW0Tt2yVTWow2MD7Q" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            <!-- Categoria de Plataforma -->
+
+            {% elif nome == "celeste" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Celeste é um jogo de plataforma que acompanha Madeline em sua difícil escalada da montanha Celeste, enfrentando obstáculos que refletem suas próprias lutas emocionais. Além da jogabilidade precisa e da narrativa sensível, a trilha sonora composta por Lena Raine ganha destaque especial: suas composições não só acompanham, mas ampliam intensamente a carga emocional da jornada, tornando cada momento ainda mais marcante.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=pkcMRPtDfPSmI5TZ&amp;list=OLAK5uy_nTPHGMjp_ZT74ssuHdCTVhZlaeooHUjeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/1ZfETfec0U02KrKNI8w3Gf?si=5ZkP9uasQPan10Lkr0u6fw" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "shovel knight" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Shovel Knight é um "platformer" retrô com alma de 8 bits e coração moderno. No controle de um cavaleiro armado com uma pá, você enfrenta inimigos caricatos, chefes memoráveis e perigos de precisão em uma aventura vibrante e cheia de charme. A trilha sonora, composta por Jake Kaufman e com faixas de Manami Matsumae (compositora de Mega Man), é um espetáculo à parte: pulsante, melódica e heroica, ela transforma cada fase em uma odisseia épica de nostalgia e bravura.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=mRsRi2HpaS3HyDmG&amp;list=OLAK5uy_k05v8LNmgyOjEwmxWOIGYU8dHav4utetA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/0mDSPMGVdWORtoEuxhyMJx?si=t4ssdwn0RKyV5JbGvnxVUA" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
+
+            {% elif nome == "dead cells" %}
+            <h1 style="text-transform: capitalize;" class="conteudo-secao-principal-titulo">{{nome}}</h1>
+            <p class="conteudo-secao-principal-paragrafo">Dead Cells é um roguelike frenético e estiloso, onde você assume o controle de uma criatura sem cabeça em um castelo em constante mutação. Com combates ágeis, sistema de progressão inteligente e visual em pixel art vibrante, o jogo prende pelo desafio e fluidez. A trilha sonora, composta por Yoann Laulan, mistura rock, eletrônico e tons barrocos, dando ritmo e intensidade à ação, um motor sonoro que pulsa com cada investida, desvio e renascimento.</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/videoseries?si=pQahisRkcnNasGEK&amp;list=PL3FTGbVzUCFDU9wpzFwK3VxP3lZKJCaQL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="conteudo-secao-principal-embedlink"></iframe>
+            <p class="conteudo-secao-principal-descEmbed">Reprodução via YouTube</p>
+            <div class="conteudo-secao-principal-div-spotify">
+                <a href="https://open.spotify.com/intl-pt/album/5MuOiTfGZfVbZ1rPcDX5A0?si=DTxt5RsoT1i2lqFPpm0uhw" target="_blank" rel="external" class="conteudo-secao-principal-spotify">
+                    <img src="{{ url_for('static', filename='images/spotify-logo.png') }}" alt="logo do Spotify" class="conteudo-secao-principal-spotify-imagem">
+                    <p class="conteudo-secao-principal-spotify-paragrafo">Escutar no Spotify&reg; </p>
+                </a>
+            </div>
 
             {% endif %}
         </section>
 
         <section class="conteudo-secao-secundaria">
-            <a href="/categorias" target="_self" style="font-size: 32px; background-color: aliceblue;" class="conteudo-secao-secundaria-botao">Voltar</a>
+            <a href="/categorias" target="_self" class="conteudo-secao-secundaria-botao">Voltar</a>
             <p class="conteudo-secao-secundaria-paragrafo">Voltar para as categorias</p>
         </section>
     </main>

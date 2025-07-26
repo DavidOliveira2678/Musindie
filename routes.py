@@ -16,21 +16,17 @@ games_categories = {
     "plataforma":["celeste", "shovel knight", "dead cells"]
     }
 
-## Rota Categoria de jogo
+## Rota Jogos
 @app.route("/categorias/<nome>")
 def game_category(nome):
     nome_formatado = nome.replace("-", " ")
     return render_template("jogos.html", nome=nome_formatado)
 
+## Rota Categorias
 @app.route("/categorias")
 def all_categories():
     category_list = list(games_categories.keys())
     return render_template('all_categories.html', categories=category_list, games_categories=games_categories)
-
-## Rota Blog
-@app.route("/blog")
-def blog():
-    return render_template("blog.html")
 
 ##Rota Cadastro
 @app.route("/cadastro")
