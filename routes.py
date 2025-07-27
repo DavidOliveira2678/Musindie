@@ -1,7 +1,31 @@
 from main import app    
-from flask import Flask , render_template
+from flask import Flask , render_template , request
+from flask_sqlalchemy import SQLAlchemy 
 
-##Rota Homepage
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mybank.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+db = SQLAlchemy(app)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key = True , autoincrement = True)
+    email = db.Column(db.String (100), unique = True, nullable = False)
+with app.app_context():
+    db.create_all()
+
+ ## Rota Cadastro
+@app.route("/login")
+def login():
+ return render_template("login.html")
+
+@app.route("/register", methods = ["POST"])
+def register():
+ email_information = request.form.get("email")
+ new_email = User(email=email_information)
+ db.session.add(new_email)
+ db.session.commit()
+ return render_template("login.html")
+
+## Rota Homepage
 @app.route("/")
 def homepage():
     total_categories = len(games_categories)
@@ -27,8 +51,3 @@ def game_category(nome):
 def all_categories():
     category_list = list(games_categories.keys())
     return render_template('all_categories.html', categories=category_list, games_categories=games_categories)
-
-##Rota Cadastro
-@app.route("/cadastro")
-def cadastro():
-    return render_template("login.html")
