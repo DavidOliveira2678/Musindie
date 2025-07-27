@@ -75,7 +75,6 @@ ul {
 .conteudo-principal{
     padding-top: 12px;
     background-color: white;
-    border: none;
     border-radius: 25px;
     width: 764px;
     height: 760px;
@@ -92,9 +91,9 @@ ul {
 }
 
 .conteudo-principal-lista-jogos{
-    justify-content: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 14px;
 }
 
@@ -114,7 +113,6 @@ ul {
     font-size: 18px;
     width: 664px;
     transition: 200ms;
-    text-align: center;
     margin: 0 auto;
     text-align: left;
 }
@@ -146,7 +144,7 @@ ul {
 }
 
 .conteudo-secao-secundaria{
-    padding-top: 26px;
+    padding-top: 22px;
 }
 
 .conteudo-secao-secundaria-div{
@@ -156,15 +154,14 @@ ul {
     transition: 200ms;
 }
 
-.conteudo-secao-secundaria-div:hover .conteudo-secao-secundaria-div-paragrafo{
-    opacity: 100%;
-    transition: 200ms;
-}
-
-
 .conteudo-secao-secundaria-div-paragrafo{
     color: aliceblue;
     opacity: 0;
+    transition: 200ms;
+}
+
+.conteudo-secao-secundaria-div:hover .conteudo-secao-secundaria-div-paragrafo{
+    opacity: 100%;
     transition: 200ms;
 }
 
@@ -179,7 +176,7 @@ ul {
     
     /* centralizar verticalmente */
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
     transition: 200ms;
 }
@@ -187,7 +184,7 @@ ul {
 .conteudo-secao-secundaria-div-botao:hover {
     background-color: rgb(219, 102, 255);
     color: #ffffff;
-    font-size: 58px;
+    font-size: 54px;
     box-shadow: 6px 6px 8px #211e22;
     width: 512px;
     margin: 0 auto;
@@ -207,16 +204,11 @@ ul {
     text-align: center;
     bottom: 0;
     width: 100%;
-}
-
-.rodape-titulo {
-    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .rodape-texto {
     color: #f3c5f0;
-    display: block;
-    text-align: center;
     width: 814px;
     height: 40px;
     margin:0 auto;

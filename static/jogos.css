@@ -27,7 +27,7 @@ body {
     padding: 12px;
     border-bottom: 0.4px solid #a584a3;
     background-color: #483d8b;
-    opacity: 65%;
+    opacity: 60%;
     transition: 200ms;
 }
 
@@ -185,7 +185,8 @@ body {
     background-color: #483d8b;
     bottom: 0;
     width: 100%;
-    opacity: 75%;
+    padding-bottom: 4px;
+    opacity: 50%;
     transition: 200ms;
 }
 
@@ -194,14 +195,8 @@ body {
     transition: 200ms;
 }
 
-.rodape-titulo {
-    padding-top: 4px;
-}
-
 .rodape-texto {
     color: #f3c5f0;
-    display: block;
-    text-align: center;
     width: 814px;
     height: 40px;
     margin:0 auto;
