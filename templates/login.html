@@ -22,9 +22,14 @@
         <section class="conteudo-secao-principal">
             <h1 class="conteudo-secao-principal-titulo">Cadastro</h1>
             <p class="conteudo-secao-principal-paragrafo">Cadastre o seu e-mail para receber atualizações sobre qualquer novidade referente ao Musindie!</p>
-            <form action= "/register"  method="POST" class="conteudo-secao-principal-formulario">
+            <form action="/register" onsubmit="myFuction()" method="POST" class="conteudo-secao-principal-formulario">
             <input type="email" placeholder="Digite seu e-mail" name= "email" class="conteudo-secao-principal-formulario-input">
             <button class="conteudo-secao-principal-botao" type="submit">Cadastrar</button>
+            <script>
+                function myFuction(){
+                    alert("Email cadastrado, você pode receber atualizações do nosso site!");
+                }
+            </script>
             </form>
         </section>
 
