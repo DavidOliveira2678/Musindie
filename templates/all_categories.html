@@ -24,15 +24,13 @@
             <p class="conteudo-principal-paragrafo">Gêneros de jogos registrados no site</p>
             <ul class="conteudo-principal-lista-jogos">
                 {% for category in categories %}
-                    <li class="conteudo-principal-lista-jogos-categoria-lista"></li>
-                        <div class="conteudo-principal-lista-jogos-categoria-div">
-                            <p class="conteudo-principal-lista-jogos-categoria-titulo">{{ category.replace('-', ' ').title() }}</p>
-                            <ul class="conteudo-principal-lista-jogos-jogo">
-                                {% for game in games_categories[category] %}
-                                    <li><a href="/categorias/{{ game }}" class="conteudo-principal-lista-jogos-jogo-opcao">{{ game }}</a></li>
-                                {% endfor %}
-                            </ul>
-                    </li>
+                    <div class="conteudo-principal-lista-jogos-categoria-div">
+                        <p class="conteudo-principal-lista-jogos-categoria-titulo">{{ category.replace('-', ' ').title() }}</p>
+                        <ul class="conteudo-principal-lista-jogos-jogo">
+                            {% for game in games_categories[category] %}
+                                <li><a href="/categorias/{{ game }}" class="conteudo-principal-lista-jogos-jogo-opcao">{{ game }}</a></li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 {% endfor %}
             </ul>
